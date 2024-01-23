@@ -2,9 +2,9 @@ import React from 'react'
 
 function VideoTitle({ originalTitle, overview }) {
     return (
-        <div className='w-100% bg-gradient-to-r from-black aspect-video absolute p-16 h-[100vh] '>
+        <div className='w-100%  aspect-video absolute p-16 h-[100%] '>
             <div className='text-white w-6/12 mt-[15rem]'>
-                <h1 className='font-bold text-[3rem] uppercase'>{originalTitle}</h1>
+                <h1 className='font-bold text-[2rem] uppercase'>{originalTitle}</h1>
                 <p className='text-[1rem] font-semibold'>{overview}</p>
                 <div className='mt-5 flex'>
                     <button className='h-[50px] text-black hover:bg-opacity-50 font-bold flex items-center justify-center rounded mr-1 p-1 w-[130px]  bg-white'>
