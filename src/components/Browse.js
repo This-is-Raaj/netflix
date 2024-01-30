@@ -7,14 +7,13 @@ import usePopularMovies from '../hooks/usePopularMovies'
 import useUpComingMovies from '../hooks/useUpComingMovies'
 import useTopRatedMovies from '../hooks/useTopRatedMovies'
 import useTrendingMovies from '../hooks/useTrendingMovies'
-import GptSearch from './GptSearch'
 import { useSelector } from 'react-redux'
+import SearchMoviesPage from './SearchMoviesPage'
 
 
 
 function Browse() {
-    const gptOn = useSelector(store => store.gptSearch.gptToggle)
-
+    const searchMovies = useSelector(store => store.movies.searchMoviesInput)
     useNowPlayingMovies()
     usePopularMovies()
     useUpComingMovies()
@@ -25,10 +24,13 @@ function Browse() {
     return (
         <div>
             <Header />
-            {gptOn ? (<GptSearch />) : (<>
+            {!searchMovies && <>
                 <MainContainer />
                 <SecondaryContainer />
-            </>)}
+            </>}
+            {searchMovies && <SearchMoviesPage />}
+
+
 
 
         </div>

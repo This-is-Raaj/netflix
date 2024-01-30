@@ -1,4 +1,4 @@
-export const LOGO = "https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png"
+export const LOGO = "https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
 
 export const USERICON = "https://wallpapers.com/images/hd/netflix-profile-pictures-1000-x-1000-qo9h82134t9nv0j0.jpg";
 
@@ -21,3 +21,5 @@ export const BGIMG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/16006346-87
 export const languageOptions = [
     { identifier: 'en', language: 'English' }, { identifier: 'tamil', language: 'Tamil' }, { identifier: 'hindi', language: 'Hindi' }
 ]
+
+export const OPENAI_KEY = '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';

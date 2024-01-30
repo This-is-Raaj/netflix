@@ -103,14 +103,14 @@ const Login = () => {
                 onSubmit={(e) => e.preventDefault()}
                 className="rounded absolute w-3/12 p-12 bg-black top-[30%] right-0 left-0 my-auto mx-auto bg-opacity-80"
             >
-                <h1 className="mb-8 text-white font-bold text-3xl">
+                <h1 className="mb-4 text-white font-bold text-3xl">
                     {isSignIn ? "Sign In" : "Sign Up"}
                 </h1>
 
                 {!isSignIn && (
                     <input
                         required
-                        className="bg-gray-800 text-white outline-none p-4 mb-8 rounded-sm  w-full"
+                        className="bg-gray-800 text-white outline-none p-4 mb-4 rounded-sm  w-full"
                         type="text"
                         placeholder="Name"
                         ref={name}
@@ -118,7 +118,7 @@ const Login = () => {
                 )}
 
                 <input
-                    className="bg-gray-800 text-white outline-none p-4 mb-8 rounded-sm  w-full"
+                    className="bg-gray-800 text-white outline-none p-4 mb-4 rounded-sm  w-full"
                     type="text"
                     placeholder="Email or phone number"
                     ref={email}
