@@ -21,6 +21,10 @@ body {
 
 @media screen and (max-width: 500px) {
   .search-wrapper input:focus {
-    width: 200px;
+    width: 80px;
+  }
+  .search-wrapper input {
+    transition: 0.3s width ease;
+    width: 50px;
   }
 }

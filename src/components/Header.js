@@ -89,12 +89,15 @@ function Header() {
     const displayName = user?.displayName;
     console.log(searchMovieInput);
     return (
-        <div className="absolute w-[100%] z-50 px-4  md:bg-gradient-to-b from-black flex justify-between items-center pt-4">
+        <div className="absolute py-2 px-2 w-[100%] z-50 sm:!px-6 md:!pt-6 md:bg-gradient-to-b from-black flex justify-between items-center">
             <img
                 className="md:w-[7rem] w-[3rem] h-[1rem] md:h-[2rem]"
                 src={LOGO}
                 alt="netflix-logo"
+
             />
+
+
             {/* <h1 className="text-red-600 text-[2rem] font-bold">NETFLIX</h1> */}
             {user && (
                 <div className="flex items-center cursor-pointer relative">
@@ -102,11 +105,11 @@ function Header() {
 
                         {searchBar &&
                             <form onSubmit={(e) => e.preventDefault()} className="flex items-center relative mr-2">
-                                <input onChange={e => setSearchMovieInput(e.target.value)} className=" bg-transparent border border-red-600 outline-none text-white p-2 mr-2 rounded-sm" placeholder="Search" />
-                                <IoIosClose className="text-white text-3xl mr-2 cursor-pointer absolute right-0 " onClick={handleCloseSearch} />
+                                <input onChange={e => setSearchMovieInput(e.target.value)} className=" bg-transparent border border-red-600 outline-none md:text-[15px] text-white py-1 pl-1 md:p-2 text-[5px] mr-2 rounded-sm" placeholder="Search" />
+                                <IoIosClose className="text-white md:text-3xl mr-2 cursor-pointer absolute right-0 " onClick={handleCloseSearch} />
                             </form>
                         }
-                        {!searchBar && <LuSearch onClick={handleSearchMovie} className="text-white text-2xl mr-2 cursor-pointer " />
+                        {!searchBar && <LuSearch onClick={handleSearchMovie} className="text-white md:text-2xl mr-2 cursor-pointer " />
                         }
                     </div>
 
@@ -114,7 +117,7 @@ function Header() {
                         <div className="flex items-center">
                             <img
                                 title={displayName}
-                                className="md:w-8 w-[31px] rounded-md hover cursor-pointer mr-2"
+                                className="md:w-8 w-[20px] rounded-md hover cursor-pointer mr-2"
                                 src={USERICON}
                                 alt="user-icon"
                             />

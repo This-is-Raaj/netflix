@@ -10,10 +10,10 @@ function SearchMovieCard({ movie }) {
     console.log(movie, 'lenth');
     return (
 
-        <div className={`${movies.length > 7 ? ' w-[200px] pr-6' : 'w-[400px] p-6'}`}>
+        <div className=' w-[200px] pr-6'>
             <img src={IMG_CDN_URL + poster_path} className={`${movies.length > 7 ? 'h-[200px] w-[300px]' : 'h-[400px] w-[400px]'}`} alt="" />
-            <h1 className='text-white py-4' >{title}</h1>
-            <p className='text-white'>Realease Date: {release_date}</p>
+            {/* <h1 className='text-white py-4' >{title}</h1> */}
+            {/* <p className='text-white'>Realease Date: {release_date}</p> */}
         </div>
     )
 }
